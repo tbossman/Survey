@@ -1,0 +1,13 @@
+// Navigate to Project Directory
+
+// Navgate to the project directory
+
+npm init -y
+
+// Install Express
+
+npm install express
+
+// Run Server
+
+node Node.js (Node file name)
