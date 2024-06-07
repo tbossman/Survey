@@ -1,3 +1,8 @@
+// File Organization
+
+Put node file in main folder, then put Html, css, and javascript in a seperate 
+folder within the main folder with the node with the name PUBLIC
+
 // Navigate to Project Directory
 
 // Navgate to the project directory
