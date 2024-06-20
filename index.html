@@ -3,12 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Node App</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Buffalo Soldiers Museum Tour Survey</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to My Node App</h1>
-    <button id="myButton">Click me!</button>
-    <script src="/script.js"></script>
+    <div class="container">
+        <header>
+            <h1>Buffalo Soldiers Museum Tour Survey</h1>
+            <p>We value your input. Please share your opinion.</p>
+        </header>
+        <form id="survey-form">
+            <!-- Name and Date Section -->
+            <section>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </section>
+            <section>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </section>
+            <section>
+                <label for="email">Join our email list:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </section>
+            <section>
+                <label for="recommend">How likely are you to recommend the Museum to family, friends, or colleagues?</label>
+                <div class="radio-group">
+                    <label><input type="radio" id="extremely_likely" name="recommend" value="1"> Extremely Likely</label>
+                    <label><input type="radio" id="somewhat_likely" name="recommend" value="2"> Somewhat Likely</label>
+                    <label><input type="radio" id="neutral" name="recommend" value="3"> Neutral</label>
+                    <label><input type="radio" id="somewhat_unlikely" name="recommend" value="4"> Somewhat Unlikely</label>
+                    <label><input type="radio" id="extremely_unlikely" name="recommend" value="5"> Extremely Unlikely</label>
+                </div>
+            </section>
+            <section>
+                <label for="satisfaction">How satisfied were you with your experience? (Circle your answer 10 = High)</label>
+                <div class="range-group">
+                    <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" step="1">
+                </div>
+            </section>
+            <section>
+                <label for="highlight">What was the highlight of your visit to the Museum?</label>
+                <select id="highlight" name="highlight" onchange="toggleOtherHighlight()">
+                    <option value="1">Learning of the origins of the Buffalo Soldiers</option>
+                    <option value="2">Understanding the role of the Buffalo Soldiers played in expanding the American West</option>
+                    <option value="3">How the Buffalo Soldiers adapted to garrison life during peacetime trainings and segregated sports</option>
+                    <option value="4">Buffalo Soldiers involvement during WWI and WWII</option>
+                    <option value="5">The Integration of America’s Armed Forces</option>
+                    <option value="6">Hearing about the first enlisted female Buffalo Soldiers</option>
+                    <option value="7">All of the above</option>
+                    <option value="8">Other</option>
+                </select>
+                <textarea id="other-highlight" name="other-highlight" placeholder="Please specify" style="display:none;"></textarea>
+            </section>
+            <section>
+                <label for="heard_about">How did you hear or learn about the Museum?</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="website" name="heard_about" value="Website"> Website</label>
+                    <label><input type="checkbox" id="google" name="heard_about" value="Google"> Google</label>
+                    <label><input type="checkbox" id="word_of_mouth" name="heard_about" value="Word of Mouth"> Word of Mouth</label>
+                    <label><input type="checkbox" id="drive_by" name="heard_about" value="Drive By"> Drove By</label>
+                    <label><input type="checkbox" id="event" name="heard_about" value="Event"> Golf Tournament or other Museum hosted event?</label>
+                </div>
+            </section>
+            <section>
+                <label for="improve">How can we improve your experience? (100 words)</label>
+                <textarea id="improve" name="improve" maxlength="100" rows="4"></textarea>
+            </section>
+            <section>
+                <label for="comments">Other comments you would like to make?</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </section>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
