@@ -1,15 +1,114 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    font-size: 18px; /* Increase font size */
+    background-color: #f4f4f4;
     margin: 0;
-    padding: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to start to ensure visibility */
+    height: 100vh;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px; /* Increase width */
+    width: 100%;
+    text-align: center;
+    margin-top: 20px; /* Ensure it's fully visible */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 h1 {
-    color: #333;
+    font-size: 2.5em; /* Increase title size */
+    text-align: center; /* Ensure the title is centered */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center form content */
+}
+
+section {
+    margin-top: 20px; /* Add blank line (space) between questions */
+    width: 100%;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px; /* Add space below labels */
+    display: block;
+}
+
+.inline {
+    display: inline-block; /* Inline labels */
+    margin-left: 10px; /* Space between input and label */
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    gap: 10px; /* Space between items */
+    margin-bottom: 10px; /* Add space below radio/checkbox groups */
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between input and label */
+}
+
+.range-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Add space below range group */
+}
+
+textarea,
+input[type="text"],
+input[type="date"],
+input[type="email"],
+select {
+    width: calc(100% - 20px); /* Adjust width */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    font-size: 16px; /* Adjust input font size */
+}
+
+textarea {
+    resize: vertical; /* Allow textarea to resize vertically */
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 20px 40px; /* Increase button size */
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 24px; /* Increase button font size */
+    cursor: pointer;
+    margin-top: 20px; /* Add space above button */
+    text-align: center;
+    display: block;
+    width: auto; /* Ensure button is centered and large */
+    max-width: 100%; /* Prevent overflow */
+}
+
+button:hover {
+    background-color: #0056b3;
 }
